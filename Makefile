@@ -6,7 +6,7 @@
 #    By: malapoug <malapoug@student.42lausanne.ch>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/09 00:28:46 by malapoug          #+#    #+#              #
-#    Updated: 2025/01/16 15:16:46 by malapoug         ###   ########.fr        #
+#    Updated: 2025/03/07 11:51:45 by malapoug         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,11 +51,13 @@ RM = rm -f
 all: $(NAME)
 
 $(NAME): $(OBJS)
+	@make -C minilibx-linux/
 	@make -C libft/
 	@$(CC) $(CFLAGS) $(OBJS) libft/libft.a minilibx-linux/libmlx_Linux.a -L/usr/lib -Imlx -lXext -lX11 -lm -lz -o $(NAME)
 	@echo "FDF compiled!\n"
 
 debug: $(OBJS)
+	@make -C minilibx-linux/
 	@make -C libft/
 	@$(CC) $(CFLAGS) $(DEBUG) $(OBJS) libft/libft.a minilibx-linux/libmlx_Linux.a -L/usr/lib -Imlx -lXext -lX11 -lm -lz -o $(NAME)
 	@echo "FDF compiled with debug!\n"
@@ -69,6 +71,7 @@ clean:
 	@$(RM) $(OBJS)
 
 fclean: clean
+	@make clean -C minilibx-linux/
 	@make fclean -C libft/
 	@$(RM) $(NAME)
 
