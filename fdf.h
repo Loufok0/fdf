@@ -6,7 +6,7 @@
 /*   By: malapoug <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 15:24:19 by malapoug          #+#    #+#             */
-/*   Updated: 2025/01/16 14:58:12 by malapoug         ###   ########.fr       */
+/*   Updated: 2025/11/01 01:13:28 by malapoug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # include <fcntl.h>
 
 # ifndef WIDTH
-#  define WIDTH 1000
+#  define WIDTH 1500
 # endif
 
 # ifndef HEIGHT
