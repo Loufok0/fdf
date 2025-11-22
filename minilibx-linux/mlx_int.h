@@ -17,6 +17,7 @@
 #ifndef MLX_INT_H
 
 # define MLX_INT_H
+# define _GNU_SOURCE
 
 # include <stdlib.h>
 # include <stdio.h>
